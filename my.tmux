@@ -14,10 +14,10 @@ set -g history-limit 100000
 set -g mouse on
 
 # change prefix
+unbind space
 unbind C-a
 set -g prefix2 C-space
 bind C-space send-prefix -2
-unbind space
 
 # session
 unbind C-c
