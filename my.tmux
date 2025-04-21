@@ -3,6 +3,9 @@
 # -- my customizations -------------------------------------------------------
 #
 # in copy mode, copying selection also copies to the OS clipboard
+#
+# tmux_conf_theme_status_right=" #[fg=yellow]#(cd #{pane_current_path}; git rev-parse --abbrev-ref HEAD)#[fg=default]$tmux_conf_theme_status_right"
+tmux_conf_theme_status_right=" #[fg=yellow]#(cd #{pane_current_path}; echo \"$(basename $(git rev-parse --show-toplevel)) | $(git rev-parse --abbrev-ref HEAD)\")#[fg=default]$tmux_conf_theme_status_right"
 tmux_conf_copy_to_os_clipboard=true
 
 # this is the place to override or undo settings
