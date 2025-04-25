@@ -6,7 +6,7 @@
 #
 tmux_conf_battery_status_charging="🔌"     # U+1F50C
 tmux_conf_battery_status_discharging="🔋"  # U+1F50B
-my_tmux_conf_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_percentage,#{battery_percentage},} , %R %d-%b | #{username}#{root} "
+my_tmux_conf_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},} #{?battery_percentage,#{battery_percentage},} , %R %d-%b | #{username}#{root} "
 tmux_conf_theme_status_right=" #[fg=yellow]#(cd #{pane_current_path}; echo \"$(basename $(git rev-parse --show-toplevel)) | $(git rev-parse --abbrev-ref HEAD)\")#[fg=default]$my_tmux_conf_status_right"
 tmux_conf_copy_to_os_clipboard=true
 
